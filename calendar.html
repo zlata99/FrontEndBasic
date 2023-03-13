@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+      }
+        body{
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        width: 300px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 5px;
+        border-radius: 7px;
+        background-color: rgb(225, 221, 221);
+
+      }
+      .calendar{
+        width: 300px;
+        cursor: pointer;
+        background-color: rgba(250, 248, 248, 0.993);
+        
+      }
+      .calendar__item:hover{
+        background-color: rgba(177, 175, 175, 0.187);
+        border-radius: 7px;
+      }
+      .calendar__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .calendar__items{
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+      }
+      .calendar__item1, .calendar__item2, .calendar__item3,
+      .calendar__item4, .calendar__item5, .calendar__item6, .calendar__item7 {
+        width: calc(100% / 7);
+        aspect-ratio: 1;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(161, 156, 156);
+      }
+      .calendar__item__first{
+        width: calc(100% / 7);
+        aspect-ratio: 1;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: rgb(122, 121, 121);
+        background-color: rgba(128, 128, 128, 0.436);
+        border-radius: 7px;
+      }
+      .calendar__item__eleven{
+        width: calc(100% / 7);
+        aspect-ratio: 1;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        background-color: black;
+        border-radius: 7px;
+    
+      }
+
+      .calendar__item{
+        width: calc(100% / 7);
+        aspect-ratio: 1;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: black;
+      }
+      .calendar__item:hover{
+        color: black;
+      }
+      
+      .calendar__button{
+        color: rgb(0, 0, 0);
+        background-color: white;
+        border-color: white;
+        border-radius: 7px;
+        padding: 7px 7px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+
+      }
+      .calendar__actions{
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        box-shadow: none;
+
+      }
+      .calendar__action{
+        padding: 5px 50px;
+        background-color: white;
+        border-color: white;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        border-radius: 7px;
+    }
+    .calendar__action__apply{
+        padding: 5px 50px;
+        color: white;
+        background-color: black;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        border-radius: 7px;
+    }
+    .calendar__action__apply:hover{
+        background-color: white;
+        color: black;
+    }
+      
+     
+      </style>
+</head>
+<body>
+   
+    <div class="calendar">
+        <div class="calendar__header">
+            <div class="calendar__nav">
+                <button class="calendar__button">
+                    <i class="las la-angle-double-left"></i> 
+                </button>
+                <button class="calendar__button">
+                    <i class="las la-angle-left"></i>
+                </button>
+            </div>
+            <h3 class="calendar_title">
+                February 2023
+            </h3>
+            <div class="calendar__nav">
+                <button class="calendar__button">
+                    <i class="las la-angle-double-right"></i> 
+                </button>
+                <button class="calendar__button">
+                    <i class="las la-angle-right"></i>
+                </button>
+            </div>
+        </div>
+        
+
+        <ul class="calendar__items">
+            <li class="calendar__item1">Mon</li>
+            <li class="calendar__item2">Tu</li>
+            <li class="calendar__item3">Wed</li>
+            <li class="calendar__item4">Th</li>
+            <li class="calendar__item5">Fr</li>
+            <li class="calendar__item6">Sat</li>
+            <li class="calendar__item7">Sun</li>
+            <li class="calendar__item__first">1</li>
+            <li class="calendar__item">2</li>
+            <li class="calendar__item">3</li>
+            <li class="calendar__item">4</li>
+            <li class="calendar__item">5</li>
+            <li class="calendar__item">6</li>
+            <li class="calendar__item">7</li>
+            <li class="calendar__item">8</li>
+            <li class="calendar__item">9</li>
+            <li class="calendar__item">10</li>
+            <li class="calendar__item__eleven">11</li>
+            <li class="calendar__item">12</li>
+            <li class="calendar__item">13</li>
+            <li class="calendar__item">14</li>
+            <li class="calendar__item">15</li>
+            <li class="calendar__item">16</li>
+            <li class="calendar__item">17</li>
+            <li class="calendar__item">18</li>
+            <li class="calendar__item">19</li>
+            <li class="calendar__item">20</li>
+            <li class="calendar__item">21</li>
+            <li class="calendar__item">22</li>
+            <li class="calendar__item">23</li>
+            <li class="calendar__item">24</li>
+            <li class="calendar__item">25</li>
+            <li class="calendar__item">26</li>
+            <li class="calendar__item">27</li>
+            <li class="calendar__item">28</li>
+            <li class="calendar__item">29</li>
+        </ul>
+
+        <div class="calendar__actions ">
+            <button class="calendar__action">
+                Cancel
+            </button>
+            <button class="calendar__action__apply">
+                Apply
+            </button>
+        </div>
+    </div>
+</body>
+</html>
